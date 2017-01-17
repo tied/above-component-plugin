@@ -38,8 +38,11 @@ hs_err_pid*
 .AppleDesktop
 Network Trash Folder
 Temporary Items
+target
+.idea
 .apdisk
-
+target/*
+.idea/*
 # Windows
 # =========================
 
