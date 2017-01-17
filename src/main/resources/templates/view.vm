@@ -1,0 +1,7 @@
+#disable_html_escaping()
+#if ($currentOptions)
+  #set ($size = $currentOptions.size())
+  #foreach ($option in $currentOptions)
+    $option.getValue()#if ($velocityCount != $size),#end
+  #end
+#end

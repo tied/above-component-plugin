@@ -1,0 +1,50 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <resource type="i18n" name="i18n" location="above-component" />
+    <web-resource key="above-component-resources" name="Above Component Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="images/" location="/images" />
+        <context>above-component</context>
+    </web-resource>
+    <customfield-type name="Above Component Custom Field" i18n-name-key="above-component.name" key="above-component" class="com.macrocode.aboveComponent.AboveComponentCFType">
+        <description key="above-component.description">Above Component Custom Field Plugin</description>
+        <resource name="view" type="velocity" location="/templates/view.vm"/>
+        <resource name="edit" type="velocity" location="/templates/edit.vm"/>
+    </customfield-type>    
+    
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    <component-import key="optionsManager" interface="com.atlassian.jira.issue.customfields.manager.OptionsManager" filter="" />
+    <component-import key="fieldConfigSchemeManager" interface="com.atlassian.jira.issue.fields.config.manager.FieldConfigSchemeManager" filter="" />
+    <component-import key="customFieldValuePersister" interface="com.atlassian.jira.issue.customfields.persistence.CustomFieldValuePersister" filter="" />
+    <component-import key="genericConfigManager" interface="com.atlassian.jira.issue.customfields.manager.GenericConfigManager" filter="" />
+    <component-import key="customFieldManager" interface="com.atlassian.jira.issue.CustomFieldManager" filter="" />
+    <component-import key="jiraBaseUrls" interface="com.atlassian.jira.issue.fields.rest.json.beans.JiraBaseUrls" filter="" />
+    <component-import key="userManager" interface="com.atlassian.jira.user.util.UserManager" filter="" />
+    <component key="ComponentFactory" class="com.atlassian.jira.util.JiraComponentFactory">
+        <interface>com.atlassian.jira.util.ComponentFactory</interface>
+    </component>
+    <component key="ComponentLocator" class="com.atlassian.jira.util.JiraComponentLocator">
+        <interface>com.atlassian.jira.util.ComponentLocator</interface>
+    </component>
+    <component-import key="managedConfigurationItemService" interface="com.atlassian.jira.config.managedconfiguration.ManagedConfigurationItemService" filter="" />
+    <component-import key="I18nResolver" interface="com.atlassian.sal.api.message.I18nResolver" filter="" />
+    <component-import key="jiraAuthenticationContext" interface="com.atlassian.jira.security.JiraAuthenticationContext" filter="" />
+    <component-import key="projectManager" interface="com.atlassian.jira.project.ProjectManager" filter="" />
+    <component-import key="issueManager" interface="com.atlassian.jira.issue.IssueManager" filter="" />
+    <component-import key="moduleFactory" interface="com.atlassian.plugin.module.ModuleFactory" filter="" />
+    <component-import key="eventPublisher" interface="com.atlassian.event.api.EventPublisher" />
+    <component-import key="pluginAccessor" interface="com.atlassian.plugin.PluginAccessor" />
+    <component-import key="pluginController" interface="com.atlassian.plugin.PluginController" />
+    <component-import key="txTemplate" interface="com.atlassian.sal.api.transaction.TransactionTemplate" />
+    <component-import key="templateRenderer" interface="com.atlassian.templaterenderer.TemplateRenderer" />
+    <component-import key="pluginSettingsFactory" interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory" />
+    <component-import key="loginUriProvider" interface="com.atlassian.sal.api.auth.LoginUriProvider" />
+    <component-import key="systemInfoUtils" interface="com.atlassian.jira.util.system.SystemInfoUtils" />        
+</atlassian-plugin>

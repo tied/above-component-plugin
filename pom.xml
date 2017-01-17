@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.macrocode.above-component</groupId>
+    <artifactId>jira-above-component</artifactId>
+    <version>1.1.5</version>
+
+    <organization>
+        <name>Atsi S.A.</name>
+        <url>http://atsisa.com</url>
+    </organization>
+
+    <name>above-component</name>
+    <description>This is the Above Component plugin for Atlassian JIRA.</description>
+    <packaging>atlassian-plugin</packaging>
+
+    <profiles>
+        <profile>
+            <id>jira-621</id>
+            <properties>
+                <jira.profile>_621</jira.profile>
+                <jira.version>6.2.1</jira.version>
+                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer1>
+                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
+                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacement>
+                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer1>
+                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
+                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacement>
+            </properties>
+        </profile>
+        <profile>
+            <id>jira-627</id>
+            <properties>
+                <jira.profile>_627</jira.profile>
+                <jira.version>6.2.7</jira.version>
+                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer1>
+                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
+                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacement>
+                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer1>
+                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
+                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacement>
+            </properties>
+        </profile>
+        <profile>
+            <id>jira-631</id>
+            <properties>
+                <jira.profile>_631</jira.profile>
+                <jira.version>6.3.1</jira.version>
+                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
+                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer2>
+                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacement>
+                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
+                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer2>
+                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacement>
+            </properties>
+        </profile>
+        <profile>
+            <id>jira-638</id>
+            <properties>
+                <jira.profile>_638</jira.profile>
+                <jira.version>6.3.8</jira.version>
+                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
+                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer2>
+                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacement>
+                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
+                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer2>
+                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacement>
+            </properties>
+        </profile>
+        <profile>
+            <id>jira-6315</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <jira.profile>_6315</jira.profile>
+                <jira.version>6.3.15</jira.version>
+                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
+                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer2>
+                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacement>
+                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
+                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer2>
+                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacement>
+            </properties>
+        </profile>
+        <profile>
+            <id>jira-640</id>
+            <properties>
+                <jira.profile>_640</jira.profile>
+                <jira.version>6.4-m13-2</jira.version>
+                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
+                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
+                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacement>
+                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
+                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
+                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacement>
+            </properties>
+        </profile>
+    </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>jira-api</artifactId>
+            <version>${jira.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>jira-core</artifactId>
+            <version>${jira.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- WIRED TEST RUNNER DEPENDENCIES -->
+        <dependency>
+            <groupId>com.atlassian.plugins</groupId>
+            <artifactId>atlassian-plugins-osgi-testrunner</artifactId>
+            <version>${plugin.testrunner.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>jsr311-api</artifactId>
+            <version>1.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2-atlassian-1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.8.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.plugins.rest</groupId>
+            <artifactId>atlassian-rest-common</artifactId>
+            <version>${rest.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.ws.rs</groupId>
+                    <artifactId>jsr311-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jersey</groupId>
+                    <artifactId>jersey-core</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.sal</groupId>
+            <artifactId>sal-api</artifactId>
+            <version>2.6.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.wink</groupId>
+            <artifactId>wink-client</artifactId>
+            <version>1.1.3-incubating</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.activeobjects</groupId>
+            <artifactId>activeobjects-plugin</artifactId>
+            <version>${ao.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.2-1002.jdbc4</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>atlassian-jira-pageobjects</artifactId>
+            <version>${jira.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.jira.tests</groupId>
+            <artifactId>jira-func-test-basics</artifactId>
+            <version>1.9.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.selenium</groupId>
+            <artifactId>atlassian-pageobjects-elements</artifactId>
+            <version>2.1.0-m9</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.8-atlassian-6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.selenium</groupId>
+            <artifactId>atlassian-selenium-browsers-auto</artifactId>
+            <version>2.0.0.m3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.plugin</groupId>
+            <artifactId>atlassian-spring-scanner-annotation</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>3.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <configuration>
+                    <quiet>false</quiet>
+                </configuration>
+                <executions>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.atlassian.maven.plugins</groupId>
+                <artifactId>maven-jira-plugin</artifactId>
+                <version>${amps.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <jvmArgs>-Xms512m -Xmx1024m -XX:MaxPermSize=1024m</jvmArgs>
+                    <pluginArtifacts>
+                        <pluginArtifact>
+                            <groupId>com.atlassian.jira.tests</groupId>
+                            <artifactId>jira-testkit-plugin</artifactId>
+                            <version>${testkit.version}</version>
+                        </pluginArtifact>
+                        <pluginArtifact>
+                            <groupId>com.atlassian.activeobjects</groupId>
+                            <artifactId>activeobjects-plugin</artifactId>
+                            <version>${ao.version}</version>
+                        </pluginArtifact>
+                        <pluginArtifact>
+                            <groupId>com.atlassian.activeobjects</groupId>
+                            <artifactId>activeobjects-jira-spi</artifactId>
+                            <version>${ao.version}</version>
+                        </pluginArtifact>
+                    </pluginArtifacts>
+                    <productVersion>${jira.version}</productVersion>
+                    <productDataVersion>${jira.version}</productDataVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <enableRulesSummary>false</enableRulesSummary>
+                    <lineLength>120</lineLength>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>2.7.1</version>
+                <configuration>
+                    <linkXRef>false</linkXRef>
+                    <verbose>true</verbose>
+                    <targetJdk>1.6</targetJdk>
+                    <rulesets>
+                        <ruleset>/rulesets/basic.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <jira.version>6.4-m13-2</jira.version>
+        <amps.version>5.0.3</amps.version>
+        <plugin.testrunner.version>1.2.0</plugin.testrunner.version>
+        <testkit.version>6.3.1</testkit.version>
+        <ao.version>0.19.7</ao.version>
+        <my.plugin.version.major>1</my.plugin.version.major>
+        <my.plugin.version.minor>0</my.plugin.version.minor>
+        <my.plugin.version.bugfix>0</my.plugin.version.bugfix>
+        <rest.version>2.7.1</rest.version>
+        <plugin.testrunner.version>1.2.0</plugin.testrunner.version>
+        <!-- Properties in Profiles - Here Default Values when no profile selected -->
+        <jira.profile></jira.profile><!-- no explicit jira profile -->
+        <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
+        <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
+        <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacement>
+        <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
+        <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
+        <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacement>
+        <license.mode></license.mode>
+        <dev.mode.replacer>DEV_MODE = false</dev.mode.replacer>
+        <dev.mode.replacement>DEV_MODE = true</dev.mode.replacement>
+        <plugin.build.number></plugin.build.number>
+        <!-- End od Properties in Profiles -->
+    </properties>
+
+</project>

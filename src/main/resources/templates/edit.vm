@@ -1,0 +1,26 @@
+#disable_html_escaping()
+$!{auiparams.put("controlHeaderClass", "aui-field-componentspicker frother-control-renderer")}
+#customControlHeader ($action $field.getId() $i18n.getText($field.getNameKey()) $fieldLayoutItem.required $displayParameters $auiparams)
+
+#if ($options)
+    <div class="ajs-multi-select-placeholder textarea long-field"></div>
+    #if (!$fieldLayoutItem.required)
+        #set ( $optionsHeaderSize = 1)
+    #end
+    <select class="select hidden" id="$field.getId()" multiple="multiple" name="$field.getId()"
+            size="#minSelectSize($options $optionsHeaderSize 5)"
+            data-remove-null-options="true" data-submit-input-val="true" data-input-text="" data-create-permission="false">
+        #foreach ($option in $options)
+            <option#if ($currentOptionsIds && $option && $currentOptionsIds.contains($option.getOptionId())) selected="selected"#end value="$!option.getOptionId()">
+                $option.getValue()
+            </option>
+        #end
+    </select>
+    <div class="description">${i18n.getText('generic.picker.static.desc')}</div>
+    #displayFieldWarning($displayParameters, $i18n.getText('bulk.edit.warning.component'))
+#else
+    <span class="field-value">$i18n.getText('common.words.none')</span>
+#end
+
+#customControlFooter ($action $field.getId() $fieldLayoutItem.getFieldDescription() $displayParameters $auiparams)
+$!{auiparams.clear()}
