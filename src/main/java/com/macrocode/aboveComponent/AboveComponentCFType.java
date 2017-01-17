@@ -12,6 +12,7 @@ import com.atlassian.jira.issue.customfields.persistence.CustomFieldValuePersist
 import com.atlassian.jira.issue.fields.CustomField;
 import com.atlassian.jira.issue.fields.layout.field.FieldLayoutItem;
 import com.atlassian.jira.issue.fields.rest.json.beans.JiraBaseUrls;
+import com.atlassian.jira.security.JiraAuthenticationContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,8 +23,10 @@ public class AboveComponentCFType extends MultiSelectCFType {
     private static final Logger log = LoggerFactory.getLogger(AboveComponentCFType.class);
     private final OptionsManager optionsManager;
 
-    public AboveComponentCFType(OptionsManager optionsManager, CustomFieldValuePersister valuePersister, GenericConfigManager genericConfigManager, JiraBaseUrls jiraBaseUrls, SearchService searchService, FeatureManager featureManager) {
-        super(optionsManager, valuePersister, genericConfigManager, jiraBaseUrls, searchService, featureManager);
+    public AboveComponentCFType(OptionsManager optionsManager, CustomFieldValuePersister valuePersister, GenericConfigManager genericConfigManager,
+                                JiraBaseUrls jiraBaseUrls, SearchService searchService, FeatureManager featureManager, JiraAuthenticationContext jiraAuthenticationContext) {
+
+        super(optionsManager, valuePersister, genericConfigManager, jiraBaseUrls, searchService, featureManager,jiraAuthenticationContext );
         this.optionsManager = optionsManager;
     }
 

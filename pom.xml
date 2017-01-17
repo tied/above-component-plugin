@@ -17,90 +17,6 @@
     <name>above-component</name>
     <description>This is the Above Component plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
-
-    <profiles>
-        <profile>
-            <id>jira-621</id>
-            <properties>
-                <jira.profile>_621</jira.profile>
-                <jira.version>6.2.1</jira.version>
-                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer1>
-                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
-                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacement>
-                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer1>
-                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
-                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacement>
-            </properties>
-        </profile>
-        <profile>
-            <id>jira-627</id>
-            <properties>
-                <jira.profile>_627</jira.profile>
-                <jira.version>6.2.7</jira.version>
-                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer1>
-                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
-                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacement>
-                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer1>
-                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
-                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacement>
-            </properties>
-        </profile>
-        <profile>
-            <id>jira-631</id>
-            <properties>
-                <jira.profile>_631</jira.profile>
-                <jira.version>6.3.1</jira.version>
-                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
-                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer2>
-                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacement>
-                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
-                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer2>
-                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacement>
-            </properties>
-        </profile>
-        <profile>
-            <id>jira-638</id>
-            <properties>
-                <jira.profile>_638</jira.profile>
-                <jira.version>6.3.8</jira.version>
-                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
-                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer2>
-                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacement>
-                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
-                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer2>
-                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacement>
-            </properties>
-        </profile>
-        <profile>
-            <id>jira-6315</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <jira.profile>_6315</jira.profile>
-                <jira.version>6.3.15</jira.version>
-                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
-                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacer2>
-                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacement>
-                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
-                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacer2>
-                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacement>
-            </properties>
-        </profile>
-        <profile>
-            <id>jira-640</id>
-            <properties>
-                <jira.profile>_640</jira.profile>
-                <jira.version>6.4-m13-2</jira.version>
-                <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
-                <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
-                <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacement>
-                <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
-                <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
-                <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacement>
-            </properties>
-        </profile>
-    </profiles>
     <dependencies>
         <dependency>
             <groupId>com.atlassian.jira</groupId>
@@ -329,29 +245,16 @@
         </plugins>
     </build>
     <properties>
-        <jira.version>6.4-m13-2</jira.version>
-        <amps.version>5.0.3</amps.version>
-        <plugin.testrunner.version>1.2.0</plugin.testrunner.version>
-        <testkit.version>6.3.1</testkit.version>
+        <jira.version>7.2.0</jira.version>
+        <amps.version>6.2.6</amps.version>
         <ao.version>0.19.7</ao.version>
-        <my.plugin.version.major>1</my.plugin.version.major>
-        <my.plugin.version.minor>0</my.plugin.version.minor>
-        <my.plugin.version.bugfix>0</my.plugin.version.bugfix>
         <rest.version>2.7.1</rest.version>
-        <plugin.testrunner.version>1.2.0</plugin.testrunner.version>
-        <!-- Properties in Profiles - Here Default Values when no profile selected -->
-        <jira.profile></jira.profile><!-- no explicit jira profile -->
-        <userCFType.super.replacer1>userPickerSearchService, i18nHelperParameter\)</userCFType.super.replacer1>
-        <userCFType.super.replacer2>userPickerSearchService, i18nHelperParameter, emailFormatterParameter\)</userCFType.super.replacer2>
-        <userCFType.super.replacement>userPickerSearchService, i18nHelperParameter, userBeanFactoryParameter\)</userCFType.super.replacement>
-        <mulitUserCFType.super.replacer1>fieldVisibilityManager, jiraBaseUrlsParameter\)</mulitUserCFType.super.replacer1>
-        <mulitUserCFType.super.replacer2>fieldVisibilityManager, jiraBaseUrlsParameter, emailFormatterParameter\)</mulitUserCFType.super.replacer2>
-        <mulitUserCFType.super.replacement>fieldVisibilityManager, jiraBaseUrlsParameter, userBeanFactoryParameter\)</mulitUserCFType.super.replacement>
-        <license.mode></license.mode>
-        <dev.mode.replacer>DEV_MODE = false</dev.mode.replacer>
-        <dev.mode.replacement>DEV_MODE = true</dev.mode.replacement>
-        <plugin.build.number></plugin.build.number>
-        <!-- End od Properties in Profiles -->
+        <plugin.testrunner.version>1.2.3</plugin.testrunner.version>
+        <atlassian.spring.scanner.version>1.2.13</atlassian.spring.scanner.version>
+        <!-- This key is used to keep the consistency between the key in atlassian-plugin.xml and the key to generate bundle. -->
+        <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
+        <!-- TestKit version 6.x for JIRA 6.x -->
+        <testkit.version>6.3.11</testkit.version>
     </properties>
 
 </project>
